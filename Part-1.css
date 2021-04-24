@@ -130,8 +130,8 @@
 }
 
 .u-section-2 .u-layout-wrap-3 {
-  width: calc(((100% - 1140px) / 2) + 406px);
-  margin: -570px auto 0 0;
+  width: 406px;
+  margin: -570px auto 0 calc(((100% - 1140px) / 2) + -23px);
 }
 
 .u-section-2 .u-layout-cell-3 {
@@ -147,22 +147,22 @@
   height: 300px;
   background-image: url("images/IMG_20200312_151824_675.jpg");
   background-position: 50% 50%;
-  margin: 0 auto;
+  margin: 0 auto 0 0;
 }
 
 .u-section-2 .u-text-5 {
   font-weight: 700;
   font-family: "Josefin Sans";
-  margin: -20px calc(((100% - 1140px) / 2) + 827px) 60px calc(((100% - 1140px) / 2) + 46px);
+  margin: -20px calc(((100% - 1140px) / 2) + 850px) 60px calc(((100% - 1140px) / 2) + 24px);
 }
 
 @media (max-width: 1199px) {
   .u-section-2 .u-layout-wrap-3 {
-    width: calc(((100% - 940px) / 2) + 406px);
+    margin-left: calc(((100% - 940px) / 2) + -23px);
   }
 
   .u-section-2 .u-text-5 {
-    margin-right: calc(((100% - 940px) / 2) + 673px);
+    margin-right: calc(((100% - 940px) / 2) + 674px);
     margin-left: calc(((100% - 940px) / 2) + 49px);
   }
 }
@@ -189,7 +189,7 @@
   }
 
   .u-section-2 .u-layout-wrap-3 {
-    width: calc(((100% - 720px) / 2) + 406px);
+    margin-left: calc(((100% - 720px) / 2) + -23px);
   }
 
   .u-section-2 .u-text-5 {
@@ -218,7 +218,7 @@
   }
 
   .u-section-2 .u-layout-wrap-3 {
-    width: calc(((100% - 540px) / 2) + 406px);
+    margin-left: calc(((100% - 540px) / 2) + -23px);
   }
 
   .u-section-2 .u-container-layout-3 {
@@ -246,7 +246,8 @@
   }
 
   .u-section-2 .u-layout-wrap-3 {
-    width: calc(((100% - 340px) / 2) + 340px);
+    width: 340px;
+    margin-left: calc(((100% - 340px) / 2));
   }
 
   .u-section-2 .u-layout-cell-3 {
