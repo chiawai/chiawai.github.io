@@ -73,7 +73,7 @@
     font-size: 3rem;
   }
 }.u-section-2 {
-  background-image: none;
+  background-image: linear-gradient(#eafdfc, #72efe9);
   min-height: 570px;
 }
 
@@ -84,6 +84,7 @@
 
 .u-section-2 .u-layout-cell-1 {
   min-height: 285px;
+  background-image: linear-gradient(to right, #eafdfc, #adf6f2);
 }
 
 .u-section-2 .u-container-layout-1 {
@@ -93,11 +94,13 @@
 .u-section-2 .u-text-1 {
   margin-top: 54px;
   margin-bottom: 0;
+  font-family: "Josefin Sans";
 }
 
 .u-section-2 .u-text-2 {
   margin-bottom: 0;
   margin-top: 20px;
+  font-family: "Josefin Sans";
 }
 
 .u-section-2 .u-layout-wrap-2 {
@@ -107,6 +110,7 @@
 
 .u-section-2 .u-layout-cell-2 {
   min-height: 285px;
+  background-image: linear-gradient(to right, #eafdfc, #adf6f2);
 }
 
 .u-section-2 .u-container-layout-2 {
@@ -116,11 +120,13 @@
 .u-section-2 .u-text-3 {
   margin-top: 54px;
   margin-bottom: 0;
+  font-family: "Josefin Sans";
 }
 
 .u-section-2 .u-text-4 {
   margin-bottom: 0;
   margin-top: 20px;
+  font-family: "Josefin Sans";
 }
 
 .u-section-2 .u-layout-wrap-3 {
@@ -146,7 +152,8 @@
 
 .u-section-2 .u-text-5 {
   font-weight: 700;
-  margin: -20px calc(((100% - 1140px) / 2) + 860px) 60px calc(((100% - 1140px) / 2) + 46px);
+  font-family: "Josefin Sans";
+  margin: -20px calc(((100% - 1140px) / 2) + 827px) 60px calc(((100% - 1140px) / 2) + 46px);
 }
 
 @media (max-width: 1199px) {
@@ -155,7 +162,7 @@
   }
 
   .u-section-2 .u-text-5 {
-    margin-right: calc(((100% - 940px) / 2) + 706px);
+    margin-right: calc(((100% - 940px) / 2) + 673px);
     margin-left: calc(((100% - 940px) / 2) + 49px);
   }
 }
