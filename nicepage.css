@@ -34223,8 +34223,14 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 @media (max-width: 575px) {
+  .u-header .u-menu-1 {
+    margin-top: 20px;
+    margin-right: -28px;
+  }
+
   .u-header .u-text-1 {
-    margin-right: 283px;
+    width: auto;
+    margin: -36px 74px 16px 0;
   }
 }
 .u-footer {
