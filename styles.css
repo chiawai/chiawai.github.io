@@ -1,6 +1,8 @@
 :root {
   --bg: #fafaf7;
   --surface: #ffffff;
+  --glass: rgba(255, 255, 255, 0.68);
+  --glass-strong: rgba(255, 255, 255, 0.82);
   --surface-muted: #f2f1ec;
   --text: #111111;
   --muted: #66665f;
@@ -23,7 +25,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    linear-gradient(135deg, rgba(238, 240, 255, 0.72) 0%, rgba(250, 250, 247, 0.9) 34%, rgba(244, 223, 210, 0.58) 100%),
+    var(--bg);
   color: var(--text);
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
@@ -63,10 +67,12 @@ img {
   width: min(100% - 40px, var(--container));
   margin: 18px auto 0;
   padding: 12px 14px 12px 18px;
-  border: 1px solid rgba(229, 225, 216, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.62);
   border-radius: 18px;
-  background: rgba(250, 250, 247, 0.88);
-  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 18px 50px rgba(30, 31, 35, 0.08);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  backdrop-filter: blur(22px) saturate(140%);
 }
 
 .brand {
@@ -135,7 +141,9 @@ img {
 }
 
 .muted {
-  background: var(--surface-muted);
+  background: rgba(242, 241, 236, 0.62);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
 }
 
 .hero-grid {
@@ -164,10 +172,10 @@ p {
 h1 {
   max-width: 780px;
   margin-bottom: 24px;
-  font-size: clamp(44px, 7vw, 78px);
+  font-size: clamp(42px, 5.6vw, 64px);
   font-weight: 800;
   letter-spacing: 0;
-  line-height: 1.03;
+  line-height: 1.08;
 }
 
 h2 {
@@ -188,7 +196,7 @@ h3 {
   max-width: 690px;
   margin-bottom: 30px;
   color: var(--muted);
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .hero-actions,
@@ -235,32 +243,45 @@ h3 {
   color: var(--text);
 }
 
-.quick-stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  max-width: 620px;
-  margin: 44px 0 0;
+.core-snapshot {
+  max-width: 720px;
+  margin-top: 42px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 24px;
+  background: var(--glass);
+  box-shadow: 0 18px 48px rgba(31, 34, 42, 0.09);
+  -webkit-backdrop-filter: blur(24px) saturate(145%);
+  backdrop-filter: blur(24px) saturate(145%);
 }
 
-.quick-stats div {
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.72);
-}
-
-.quick-stats dt {
-  font-size: 26px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.quick-stats dd {
-  margin: 8px 0 0;
+.core-snapshot p {
+  margin-bottom: 14px;
   color: var(--muted);
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.core-pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.core-pill-grid span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 9px 12px;
+  border: 1px solid rgba(68, 80, 183, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #22242c;
+  font-size: 13px;
+  font-weight: 750;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 .hero-media {
@@ -286,10 +307,12 @@ h3 {
   max-width: 330px;
   gap: 12px;
   padding: 16px;
-  border: 1px solid rgba(229, 225, 216, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.74);
   box-shadow: 0 16px 42px rgba(22, 22, 25, 0.13);
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
+  backdrop-filter: blur(22px) saturate(145%);
 }
 
 .role-dot {
@@ -345,10 +368,12 @@ h3 {
 
 .work-card {
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.68);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: var(--glass-strong);
   box-shadow: 0 8px 28px rgba(25, 27, 30, 0.04);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  backdrop-filter: blur(18px) saturate(135%);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -442,9 +467,12 @@ h3 {
 
 .skills-table {
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 24px;
-  background: var(--surface);
+  background: var(--glass-strong);
+  box-shadow: 0 18px 48px rgba(31, 34, 42, 0.07);
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+  backdrop-filter: blur(20px) saturate(135%);
 }
 
 .skills-row {
@@ -494,9 +522,12 @@ h3 {
 .timeline-item {
   position: relative;
   padding: 26px 28px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 22px;
-  background: var(--surface);
+  background: var(--glass-strong);
+  box-shadow: 0 14px 36px rgba(31, 34, 42, 0.06);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  backdrop-filter: blur(18px) saturate(135%);
 }
 
 .timeline-dot {
@@ -533,15 +564,24 @@ h3 {
   align-items: center;
   gap: 32px;
   padding: 44px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 28px;
-  background: var(--surface);
+  background: var(--glass-strong);
   box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(24px) saturate(145%);
+  backdrop-filter: blur(24px) saturate(145%);
 }
 
 .contact-panel p {
   max-width: 620px;
   color: var(--muted);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
 .site-footer {
@@ -601,6 +641,10 @@ h3 {
   .contact-panel {
     justify-items: start;
   }
+
+  .contact-actions {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 720px) {
@@ -624,10 +668,12 @@ h3 {
     flex-direction: column;
     align-items: stretch;
     padding: 12px;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 18px;
-    background: var(--surface);
+    background: rgba(255, 255, 255, 0.86);
     box-shadow: var(--shadow);
+    -webkit-backdrop-filter: blur(22px) saturate(145%);
+    backdrop-filter: blur(22px) saturate(145%);
   }
 
   body.nav-open .site-nav {
@@ -655,8 +701,13 @@ h3 {
     font-size: 17px;
   }
 
-  .quick-stats {
-    grid-template-columns: 1fr;
+  .core-snapshot {
+    padding: 16px;
+  }
+
+  .core-pill-grid span {
+    width: 100%;
+    justify-content: center;
   }
 
   .role-card {
@@ -697,7 +748,12 @@ h3 {
     padding: 28px;
   }
 
-  .contact-panel .button {
+  .contact-actions {
+    width: 100%;
+  }
+
+  .contact-panel .button,
+  .contact-actions .button {
     width: 100%;
     overflow-wrap: anywhere;
   }
