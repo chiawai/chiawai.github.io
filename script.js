@@ -2,11 +2,14 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
 const tabs = document.querySelectorAll(".project-tab");
 const projects = document.querySelectorAll(".project-card");
-const dots = document.querySelectorAll(".project-dots span");
 const revealItems = document.querySelectorAll(".expertise-card, .project-card, .contact-panel");
 const sections = document.querySelectorAll("#top, #expertise, #work, #contact");
 
 document.body.classList.add("js-enabled");
+
+revealItems.forEach((item, index) => {
+  item.style.setProperty("--reveal-delay", `${(index % 10) * 45}ms`);
+});
 
 window.addEventListener("DOMContentLoaded", () => {
   if (window.lucide) {
@@ -29,16 +32,26 @@ navLinks.forEach((link) => {
 tabs.forEach((tab, tabIndex) => {
   tab.addEventListener("click", () => {
     const filter = tab.dataset.filter;
+    let visibleIndex = 0;
 
     tabs.forEach((item) => item.classList.remove("active"));
     tab.classList.add("active");
 
     projects.forEach((project) => {
       const categories = project.dataset.category || "";
-      project.hidden = filter !== "all" && !categories.includes(filter);
-    });
+      const isVisible = filter === "all" || categories.includes(filter);
+      project.hidden = !isVisible;
 
-    dots.forEach((dot, index) => dot.classList.toggle("active", index === Math.min(tabIndex, dots.length - 1)));
+      if (isVisible) {
+        project.style.setProperty("--reveal-delay", `${(visibleIndex % 12) * 42}ms`);
+        project.classList.remove("is-visible");
+        visibleIndex += 1;
+
+        window.requestAnimationFrame(() => {
+          project.classList.add("is-visible");
+        });
+      }
+    });
   });
 });
 

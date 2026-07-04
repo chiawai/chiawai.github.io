@@ -622,8 +622,8 @@ h1 span {
 
 .project-tabs {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 0;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
   margin-bottom: 28px;
   padding: 8px;
   border: 1px solid rgba(229, 225, 216, 0.68);
@@ -652,27 +652,56 @@ h1 span {
   box-shadow: 0 12px 28px rgba(83, 102, 255, 0.24);
 }
 
+.work-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.work-summary span {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  border: 1px solid rgba(229, 225, 216, 0.68);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 14px 34px rgba(31, 34, 42, 0.04);
+}
+
+.work-summary strong {
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 900;
+}
+
 .project-track {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .project-card {
   position: relative;
   overflow: hidden;
   display: flex;
-  min-height: 176px;
+  min-height: 238px;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 18px;
-  border-radius: 14px;
+  padding: 20px;
+  border-radius: 18px;
   background: #222;
   color: #fff;
   box-shadow: 0 18px 44px rgba(31, 34, 42, 0.14);
   transition:
-    opacity 180ms ease,
-    transform 180ms ease;
+    opacity 420ms ease,
+    transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 180ms ease;
 }
 
 .project-card[hidden] {
@@ -684,6 +713,7 @@ h1 span {
 .js-enabled .contact-panel {
   opacity: 0;
   transform: translateY(18px);
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
 .js-enabled .expertise-card.is-visible,
@@ -704,7 +734,9 @@ h1 span {
 .project-card::before {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 20%, rgba(0, 0, 0, 0.68));
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.74) 100%),
+    radial-gradient(circle at 75% 18%, rgba(255, 255, 255, 0.25), transparent 20%);
   content: "";
 }
 
@@ -737,48 +769,73 @@ h1 span {
   background: linear-gradient(135deg, #8c6847, #e0bd92);
 }
 
+.project-orange {
+  background: linear-gradient(135deg, #b2551f, #f0a04a);
+}
+
+.project-crm {
+  background: linear-gradient(135deg, #24376b, #5e6ad2);
+}
+
 .project-card h3,
+.project-card p,
+.project-card a,
 .project-label {
   position: relative;
   z-index: 1;
 }
 
 .project-card h3 {
-  max-width: 180px;
-  margin: 0;
-  font-size: 17px;
+  max-width: 240px;
+  margin: 0 0 10px;
+  font-size: 21px;
   font-weight: 900;
-  line-height: 1.17;
+  line-height: 1.12;
+}
+
+.project-card p {
+  min-height: 64px;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.project-card a {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 36px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 850;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.project-card a:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.project-card a svg {
+  width: 13px;
+  height: 13px;
 }
 
 .project-label {
   width: fit-content;
-  margin-top: 12px;
+  margin-bottom: 14px;
   padding: 5px 9px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.18);
   color: rgba(255, 255, 255, 0.92);
   font-size: 11px;
   font-weight: 800;
-}
-
-.project-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 26px;
-}
-
-.project-dots span {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: #d8d8e6;
-}
-
-.project-dots span.active {
-  width: 22px;
-  background: var(--primary);
 }
 
 .contact-section {
@@ -977,6 +1034,7 @@ h1 span {
 
   .expertise-grid,
   .project-track,
+  .work-summary,
   .contact-panel {
     grid-template-columns: 1fr;
   }
