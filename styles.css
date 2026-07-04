@@ -621,63 +621,44 @@ h1 span {
 }
 
 .project-tabs {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  display: flex;
   gap: 6px;
   margin-bottom: 28px;
   padding: 8px;
   border: 1px solid rgba(229, 225, 216, 0.68);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.78);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.project-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .project-tab {
   display: inline-flex;
+  flex: 1 0 auto;
   min-height: 40px;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  padding: 0 16px;
   border: 0;
   border-radius: 999px;
   background: transparent;
   color: #444853;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 750;
+  white-space: nowrap;
 }
 
 .project-tab.active {
   background: linear-gradient(135deg, #5366ff, #775cff);
   color: #fff;
   box-shadow: 0 12px 28px rgba(83, 102, 255, 0.24);
-}
-
-.work-summary {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-bottom: 24px;
-}
-
-.work-summary span {
-  display: flex;
-  min-height: 58px;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 16px;
-  border: 1px solid rgba(229, 225, 216, 0.68);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.68);
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 700;
-  box-shadow: 0 14px 34px rgba(31, 34, 42, 0.04);
-}
-
-.work-summary strong {
-  color: var(--text);
-  font-size: 22px;
-  font-weight: 900;
 }
 
 .project-track {
@@ -771,6 +752,10 @@ h1 span {
 
 .project-orange {
   background: linear-gradient(135deg, #b2551f, #f0a04a);
+}
+
+.project-codex {
+  background: linear-gradient(135deg, #172238, #5366ff);
 }
 
 .project-crm {
@@ -937,7 +922,6 @@ h1 span {
   }
 
   .project-tabs {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 6px;
   }
 }
@@ -1034,14 +1018,8 @@ h1 span {
 
   .expertise-grid,
   .project-track,
-  .work-summary,
   .contact-panel {
     grid-template-columns: 1fr;
-  }
-
-  .project-tabs {
-    display: flex;
-    overflow-x: auto;
   }
 
   .project-tab {
