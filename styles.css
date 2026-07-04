@@ -670,10 +670,11 @@ h1 span {
 .project-card {
   position: relative;
   overflow: hidden;
-  display: flex;
-  min-height: 238px;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: grid;
+  min-height: 254px;
+  grid-template-rows: 34px 58px minmax(72px, 1fr) 38px;
+  align-content: end;
+  row-gap: 12px;
   padding: 20px;
   border-radius: 18px;
   background: #222;
@@ -772,15 +773,14 @@ h1 span {
 
 .project-card h3 {
   max-width: 240px;
-  margin: 0 0 10px;
+  margin: 0;
   font-size: 21px;
   font-weight: 900;
   line-height: 1.12;
 }
 
 .project-card p {
-  min-height: 64px;
-  margin-bottom: 18px;
+  margin: 0;
   color: rgba(255, 255, 255, 0.78);
   font-size: 13px;
   line-height: 1.45;
@@ -814,7 +814,7 @@ h1 span {
 
 .project-label {
   width: fit-content;
-  margin-bottom: 14px;
+  align-self: start;
   padding: 5px 9px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.18);
