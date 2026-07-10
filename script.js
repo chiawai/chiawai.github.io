@@ -4,6 +4,13 @@ const tabs = document.querySelectorAll(".project-tab");
 const projects = document.querySelectorAll(".project-card");
 const revealItems = document.querySelectorAll(".expertise-card, .project-card, .contact-panel");
 const sections = document.querySelectorAll("#top, #expertise, #work, #contact");
+const galleryImages = document.querySelectorAll(".collection-gallery img");
+const imageLightbox = document.querySelector(".image-lightbox");
+const imageLightboxImage = imageLightbox?.querySelector("img");
+const imageLightboxCaption = imageLightbox?.querySelector("p");
+const imageLightboxCloseItems = imageLightbox?.querySelectorAll(
+  ".image-lightbox-backdrop, .image-lightbox-close",
+);
 
 document.body.classList.add("js-enabled");
 
@@ -27,6 +34,46 @@ navLinks.forEach((link) => {
     document.body.classList.remove("nav-open");
     navToggle?.setAttribute("aria-expanded", "false");
   });
+});
+
+const closeImageLightbox = () => {
+  imageLightbox?.classList.remove("is-open");
+  imageLightbox?.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("lightbox-open");
+};
+
+galleryImages.forEach((image) => {
+  image.setAttribute("tabindex", "0");
+  image.setAttribute("role", "button");
+
+  const openImage = () => {
+    if (!imageLightbox || !imageLightboxImage || !imageLightboxCaption) return;
+
+    imageLightboxImage.src = image.currentSrc || image.src;
+    imageLightboxImage.alt = image.alt;
+    imageLightboxCaption.textContent = image.alt;
+    imageLightbox.classList.add("is-open");
+    imageLightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+  };
+
+  image.addEventListener("click", openImage);
+  image.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openImage();
+    }
+  });
+});
+
+imageLightboxCloseItems?.forEach((item) => {
+  item.addEventListener("click", closeImageLightbox);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeImageLightbox();
+  }
 });
 
 const applyProjectFilter = (filter) => {

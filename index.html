@@ -11,13 +11,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260705-hero-expertise" />
+    <link rel="stylesheet" href="styles.css?v=20260708-dark-glow" />
+    <link rel="stylesheet" href="experience.css?v=20260710-reactbits" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   </head>
   <body>
+    <div class="ambient-stage" aria-hidden="true">
+      <canvas id="ambient-canvas"></canvas>
+      <div class="ambient-noise"></div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="target-cursor" aria-hidden="true">
+      <span class="cursor-dot"></span>
+      <span class="cursor-ring"></span>
+    </div>
+
     <header class="site-header">
       <a class="brand" href="#top" aria-label="SEE CHIA WAI home">
         <span class="brand-mark">SC</span>
@@ -44,6 +55,10 @@
 
     <main id="top">
       <section class="hero section">
+        <div class="scroll-cue" aria-hidden="true">
+          <span>SCROLL TO EXPLORE</span>
+          <i></i>
+        </div>
         <div class="hero-orbit hero-orbit-one"></div>
         <div class="hero-orbit hero-orbit-two"></div>
         <div class="hero-dots hero-dots-left"></div>
@@ -51,38 +66,48 @@
 
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">MULTIDISCIPLINARY DIGITAL SPECIALIST</p>
+            <div class="hero-status">
+              <span class="status-pulse"></span>
+              Available for opportunities
+            </div>
+            <p class="eyebrow scramble-text">MULTIDISCIPLINARY DIGITAL SPECIALIST</p>
             <h1>
-              Bridging creativity, technology and business to deliver measurable digital
-              <span>impact.</span>
+              <span class="hero-line"><span>Strategy.</span></span>
+              <span class="hero-line"><span>Creativity.</span></span>
+              <span class="hero-line"><span>Digital <em>Impact.</em></span></span>
             </h1>
             <div class="headline-rule" aria-hidden="true"></div>
             <p class="hero-intro">
-              I bring 5 years of hands-on experience across e-commerce, performance marketing,
-              web and app development, graphic and multimedia design, team leadership, and
-              compliance documentation.
+              I bridge creativity, technology and business to deliver measurable digital
+              solutions that drive growth and meaningful results.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#contact">
+              <a class="button button-primary magnetic-target cursor-target" href="#contact">
                 <span class="button-icon"><i data-lucide="download"></i></span>
                 Download Resume
               </a>
-              <a class="button button-secondary" href="#expertise">
+              <a class="button button-secondary magnetic-target cursor-target" href="#expertise">
                 <span class="button-icon"><i data-lucide="layout-grid"></i></span>
                 Explore My Expertise
               </a>
-              <a class="button button-secondary" href="#work">
+              <a class="button button-secondary magnetic-target cursor-target" href="#work">
                 <span class="button-icon"><i data-lucide="eye"></i></span>
-                View Artwork & Project
+                View My Work
               </a>
+            </div>
+            <div class="hero-proof" aria-label="Experience summary">
+              <div><strong>5+</strong><span>Years across digital operations</span></div>
+              <div><strong>7</strong><span>Connected areas of expertise</span></div>
+              <div><strong>14</strong><span>Interns trained and mentored</span></div>
             </div>
           </div>
 
           <div class="hero-media" aria-label="Portrait and WhatsApp contact summary">
-            <div class="photo-frame">
-              <img src="assets/profile-web.jpg" alt="Portrait of See Chia Wai" />
+            <div class="photo-frame cursor-target" data-tilt="hero">
+              <img src="assets/profile-web.jpg" alt="Portrait of See Chia Wai" fetchpriority="high" decoding="async" />
+              <span class="photo-shine" aria-hidden="true"></span>
             </div>
-            <a class="whatsapp-card" href="https://wa.me/60102896331">
+            <a class="whatsapp-card magnetic-target cursor-target" href="https://wa.me/60102896331">
               <span class="whatsapp-badge"><i data-lucide="message-circle"></i></span>
               <span>
                 <strong>Let's connect on WhatsApp</strong>
@@ -94,12 +119,29 @@
         </div>
       </section>
 
+      <div class="capability-marquee" aria-label="Capability highlights">
+        <div class="marquee-track">
+          <span>Creative Direction</span><i></i>
+          <span>E-Commerce Growth</span><i></i>
+          <span>Performance Marketing</span><i></i>
+          <span>Shopify Development</span><i></i>
+          <span>AI Workflow</span><i></i>
+          <span>Team Leadership</span><i></i>
+          <span>Creative Direction</span><i></i>
+          <span>E-Commerce Growth</span><i></i>
+          <span>Performance Marketing</span><i></i>
+          <span>Shopify Development</span><i></i>
+          <span>AI Workflow</span><i></i>
+          <span>Team Leadership</span><i></i>
+        </div>
+      </div>
+
       <section class="section expertise-section" id="expertise">
         <div class="container">
           <div class="section-heading">
             <div>
               <p class="eyebrow">CORE EXPERTISE</p>
-              <h2>A broad skill set with practical delivery.</h2>
+              <h2 class="scroll-reveal-text">A broad skill set with practical delivery.</h2>
             </div>
             <p>
               Seven connected areas across creative, commerce, web, app development, AI,
@@ -107,7 +149,7 @@
             </p>
           </div>
           <div class="expertise-grid" aria-label="Core expertise">
-            <article class="expertise-card expertise-purple">
+            <article class="expertise-card expertise-purple spotlight-card cursor-target">
               <div class="expertise-top">
                 <span class="expertise-icon"><i data-lucide="pen-tool"></i></span>
                 <span class="expertise-number">01</span>
@@ -123,7 +165,7 @@
               <a class="card-arrow" href="#work" aria-label="View creative work"><i data-lucide="arrow-right"></i></a>
             </article>
 
-            <article class="expertise-card expertise-blue">
+            <article class="expertise-card expertise-blue spotlight-card cursor-target">
               <div class="expertise-top">
                 <span class="expertise-icon"><i data-lucide="shopping-cart"></i></span>
                 <span class="expertise-number">02</span>
@@ -139,7 +181,7 @@
               <a class="card-arrow" href="#work" aria-label="View e-commerce work"><i data-lucide="arrow-right"></i></a>
             </article>
 
-            <article class="expertise-card expertise-green">
+            <article class="expertise-card expertise-green spotlight-card cursor-target">
               <div class="expertise-top">
                 <span class="expertise-icon"><i data-lucide="shopping-bag"></i></span>
                 <span class="expertise-number">03</span>
@@ -155,7 +197,7 @@
               <a class="card-arrow" href="#work" aria-label="View Shopify work"><i data-lucide="arrow-right"></i></a>
             </article>
 
-            <article class="expertise-card expertise-indigo">
+            <article class="expertise-card expertise-indigo spotlight-card cursor-target">
               <div class="expertise-top">
                 <span class="expertise-icon"><i data-lucide="app-window"></i></span>
                 <span class="expertise-number">04</span>
@@ -171,7 +213,7 @@
               <a class="card-arrow" href="#work" aria-label="View Codex app development work"><i data-lucide="arrow-right"></i></a>
             </article>
 
-            <article class="expertise-card expertise-orange">
+            <article class="expertise-card expertise-orange spotlight-card cursor-target">
               <div class="expertise-top">
                 <span class="expertise-icon"><i data-lucide="bot"></i></span>
                 <span class="expertise-number">05</span>
@@ -187,7 +229,7 @@
               <a class="card-arrow" href="#work" aria-label="View AI work"><i data-lucide="arrow-right"></i></a>
             </article>
 
-            <article class="expertise-card expertise-pink">
+            <article class="expertise-card expertise-pink spotlight-card cursor-target">
               <div class="expertise-top">
                 <span class="expertise-icon"><i data-lucide="users"></i></span>
                 <span class="expertise-number">06</span>
@@ -203,7 +245,7 @@
               <a class="card-arrow" href="#contact" aria-label="Contact about leadership experience"><i data-lucide="arrow-right"></i></a>
             </article>
 
-            <article class="expertise-card expertise-violet">
+            <article class="expertise-card expertise-violet spotlight-card cursor-target">
               <div class="expertise-top">
                 <span class="expertise-icon"><i data-lucide="shield-check"></i></span>
                 <span class="expertise-number">07</span>
@@ -227,12 +269,12 @@
           <div class="work-heading">
             <div>
               <p class="eyebrow">SELECTED WORK</p>
-              <h2>Artwork & Projects</h2>
-              <p>A selection of creative and digital work across design, multimedia and development.</p>
+              <h2 class="scroll-reveal-text">Featured work that drives results.</h2>
+              <p>A focused selection across creative design, digital commerce, media and development.</p>
             </div>
           </div>
 
-          <div class="project-tabs" role="tablist" aria-label="Project categories">
+          <div class="project-tabs spotlight-card" role="tablist" aria-label="Project categories">
             <button class="project-tab active" type="button" data-filter="design"><i data-lucide="wand-sparkles"></i> Graphic Design</button>
             <button class="project-tab" type="button" data-filter="media"><i data-lucide="clapperboard"></i> Multimedia Design</button>
             <button class="project-tab" type="button" data-filter="commerce"><i data-lucide="store"></i> E-Commerce Platform</button>
@@ -243,43 +285,43 @@
           </div>
 
           <div class="project-track" aria-label="Selected projects">
-            <article class="project-card project-purple" data-category="design">
+            <article class="project-card project-purple project-image-card" data-category="design" style="--project-image: url('assets/work-web/chinese-new-year-red-packet-hari-raya-packet-design/cny-2023-angpao-design.jpg')">
               <span class="project-label">Graphic Design</span>
               <h3>Campaign Design</h3>
               <p>Campaign key visuals, promotion layouts and seasonal creative direction.</p>
               <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
-            <article class="project-card project-purple" data-category="design">
+            <article class="project-card project-purple project-image-card" data-category="design" style="--project-image: url('assets/work-web/physical-voucher-design/ouson-care-website-voucher-01.jpg')">
               <span class="project-label">Graphic Design</span>
               <h3>Social Media Post</h3>
               <p>Daily social assets, sale visuals, product highlights and brand communication.</p>
               <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
-            <article class="project-card project-purple" data-category="design">
+            <article class="project-card project-purple project-image-card" data-category="design" style="--project-image: url('assets/work-web/ouson-brand-ip-character-design/pickle-ball-2-converted-basketball.png')">
               <span class="project-label">Graphic Design</span>
               <h3>After-Sale Use Artwork</h3>
               <p>Customer education visuals, usage guides, notices and post-purchase support assets.</p>
               <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
-            <article class="project-card project-purple" data-category="design">
+            <article class="project-card project-purple project-image-card" data-category="design" style="--project-image: url('assets/work-web/ouson-brand-ip-character-design/pickle-ball-2-converted-basketball.png')">
               <span class="project-label">Graphic Design</span>
               <h3>Character Design</h3>
               <p>Character-based visuals for campaigns, education content and brand storytelling.</p>
-              <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
+              <a href="#collection-ouson-brand-ip-character-design">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
-            <article class="project-card project-purple" data-category="design">
+            <article class="project-card project-purple project-image-card" data-category="design" style="--project-image: url('assets/work-web/physical-voucher-design/voucher-hari-raya-front-page.jpg')">
               <span class="project-label">Graphic Design</span>
               <h3>Facebook Ads Content</h3>
               <p>Meta ad creatives built for offer clarity, attention and performance testing.</p>
               <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
-            <article class="project-card project-purple" data-category="design">
+            <article class="project-card project-purple project-image-card" data-category="design" style="--project-image: url('assets/work-web/corporate-business-card-design/ouson-name-card-2024-08.jpg')">
               <span class="project-label">Graphic Design</span>
               <h3>Flyer Design</h3>
               <p>Print and digital flyers for campaigns, product education and sales support.</p>
               <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
-            <article class="project-card project-purple" data-category="design">
+            <article class="project-card project-purple project-image-card" data-category="design" style="--project-image: url('assets/work-web/t-shirt-corporate-uniform-design/ouson-new-shirt-page-1-image-0001.jpg')">
               <span class="project-label">Graphic Design</span>
               <h3>SKU Design</h3>
               <p>Product SKU visuals, variant graphics and marketplace-ready product assets.</p>
@@ -295,7 +337,7 @@
               <span class="project-label">Graphic Design</span>
               <h3>Packet Design</h3>
               <p>Packet visuals and packaging-facing artwork for consistent product presentation.</p>
-              <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
+              <a href="#collection-chinese-new-year-red-packet-hari-raya-packet-design">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
             <article class="project-card project-purple" data-category="design">
               <span class="project-label">Graphic Design</span>
@@ -319,19 +361,19 @@
               <span class="project-label">Graphic Design</span>
               <h3>Voucher Design</h3>
               <p>Promo vouchers, discount visuals and retention materials for commerce campaigns.</p>
-              <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
+              <a href="#collection-physical-voucher-design">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
             <article class="project-card project-purple" data-category="design">
               <span class="project-label">Graphic Design</span>
               <h3>Name Card Design</h3>
               <p>Business card layouts aligned with brand identity and professional usage.</p>
-              <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
+              <a href="#collection-corporate-business-card-design">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
             <article class="project-card project-purple" data-category="design">
               <span class="project-label">Graphic Design</span>
               <h3>T-Shirt Design</h3>
               <p>Apparel graphics and brand merchandise concepts for campaign and team usage.</p>
-              <a href="#contact">View Collection <i data-lucide="arrow-right"></i></a>
+              <a href="#collection-t-shirt-corporate-uniform-design">View Collection <i data-lucide="arrow-right"></i></a>
             </article>
             <article class="project-card project-purple" data-category="design">
               <span class="project-label">Graphic Design</span>
@@ -540,6 +582,240 @@
         </div>
       </section>
 
+      <section class="collection-modal" id="collection-ouson-brand-ip-character-design" aria-labelledby="ouson-brand-ip-character-design-title">
+        <a class="collection-backdrop" href="#work" aria-label="Close collection"></a>
+        <div class="collection-dialog" role="dialog" aria-modal="true">
+          <div class="collection-header">
+            <div>
+              <div class="collection-tags">
+                <span>Graphic Design</span>
+                <span>Character Design</span>
+                <span>14 Images</span>
+              </div>
+              <h2 id="ouson-brand-ip-character-design-title">OUSON Brand IP Character Design</h2>
+              <p>Contributed to and developed the brand character design, including creating additional character variations and expanding the character lineup over time.</p>
+            </div>
+            <a class="collection-close" href="#work" aria-label="Close collection">
+              <i data-lucide="x"></i>
+            </a>
+          </div>
+
+          <div class="collection-gallery" aria-label="OUSON Brand IP Character Design image gallery">
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/pickle-ball-2-converted-basketball.png" alt="Pickle Ball-2 [Converted]_Basketball.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/pickle-ball-2-converted-golf.png" alt="Pickle Ball-2 [Converted]_Golf.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/pickle-ball-2-converted-pickle-ball.png" alt="Pickle Ball-2 [Converted]_Pickle Ball.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/pickle-ball-2-converted-soccer.png" alt="Pickle Ball-2 [Converted]_Soccer.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/pickle-ball-2-converted-swimming.png" alt="Pickle Ball-2 [Converted]_Swimming.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/rushing.png" alt="Rushing.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/badge-final-mr-ouson-ouson-pin-bubbles.jpg" alt="[Badge_Final] Mr. Ouson_OUSON-PIN-Bubbles-.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/badge-final-mr-ouson-ouson-pin-detective.jpg" alt="[Badge_Final] Mr. Ouson_OUSON-PIN-Detective-.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/badge-final-mr-ouson-ouson-pin-flower.jpg" alt="[Badge_Final] Mr. Ouson_OUSON-PIN-Flower-.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/badge-final-mr-ouson-ouson-pin-funny.jpg" alt="[Badge_Final] Mr. Ouson_OUSON-PIN-Funny-.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/badge-final-mr-ouson-ouson-pin-love.jpg" alt="[Badge_Final] Mr. Ouson_OUSON-PIN-Love-.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/ouson-mascot-02.png" alt="Ouson Mascot-02.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/ouson-mascot-03.png" alt="Ouson Mascot-03.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/ouson-brand-ip-character-design/ouson-mascot-strong-2-02.png" alt="Ouson Mascot-Strong-2-02.png" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-modal" id="collection-corporate-business-card-design" aria-labelledby="corporate-business-card-design-title">
+        <a class="collection-backdrop" href="#work" aria-label="Close collection"></a>
+        <div class="collection-dialog" role="dialog" aria-modal="true">
+          <div class="collection-header">
+            <div>
+              <div class="collection-tags">
+                <span>Graphic Design</span>
+                <span>Name Card Design</span>
+                <span>6 Images</span>
+              </div>
+              <h2 id="corporate-business-card-design-title">Corporate Business Card Design</h2>
+              <p>Designed professional business cards for the company’s management team, ensuring a premium appearance while maintaining consistent brand identity.</p>
+            </div>
+            <a class="collection-close" href="#work" aria-label="Close collection">
+              <i data-lucide="x"></i>
+            </a>
+          </div>
+
+          <div class="collection-gallery" aria-label="Corporate Business Card Design image gallery">
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/corporate-business-card-design/ouson-name-card-2024-08.jpg" alt="[Ouson] Name Card 2024-08.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/corporate-business-card-design/ouson-name-card-2024-09.jpg" alt="[Ouson] Name Card 2024-09.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/corporate-business-card-design/name-card-cm-chan-reanneq-distribution-ol-01.jpg" alt="Name Card (CM CHAN)- ReanneQ Distribution_OL-01.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/corporate-business-card-design/ouson-vincent-quah-02.jpg" alt="[Ouson] Vincent Quah-02.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/corporate-business-card-design/ouson-vincent-quah-01.jpg" alt="[Ouson] Vincent Quah-01.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/corporate-business-card-design/name-card-cm-chan-reanneq-distribution-ol-02.jpg" alt="Name Card (CM CHAN)- ReanneQ Distribution_OL-02.jpg" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-modal" id="collection-chinese-new-year-red-packet-hari-raya-packet-design" aria-labelledby="chinese-new-year-red-packet-hari-raya-packet-design-title">
+        <a class="collection-backdrop" href="#work" aria-label="Close collection"></a>
+        <div class="collection-dialog" role="dialog" aria-modal="true">
+          <div class="collection-header">
+            <div>
+              <div class="collection-tags">
+                <span>Graphic Design</span>
+                <span>Packet Design</span>
+                <span>4 Images</span>
+              </div>
+              <h2 id="chinese-new-year-red-packet-hari-raya-packet-design-title">Chinese New Year Red Packet &amp; Hari Raya Packet Design</h2>
+              <p>Designed festive packets for the company, used for marketing campaigns, promotional activities, and customer giveaways.</p>
+            </div>
+            <a class="collection-close" href="#work" aria-label="Close collection">
+              <i data-lucide="x"></i>
+            </a>
+          </div>
+
+          <div class="collection-gallery" aria-label="Chinese New Year Red Packet &amp; Hari Raya Packet Design image gallery">
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/chinese-new-year-red-packet-hari-raya-packet-design/cny-2023-angpao-design.jpg" alt="[CNY 2023] Angpao Design.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/chinese-new-year-red-packet-hari-raya-packet-design/cny-2024-angpao-design.png" alt="[CNY 2024] Angpao Design.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/chinese-new-year-red-packet-hari-raya-packet-design/2026-raya-packet.jpg" alt="[2026] Raya Packet.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/chinese-new-year-red-packet-hari-raya-packet-design/2026-raya-packet-reference.png" alt="[2026] Raya Packet Reference.png" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-modal" id="collection-t-shirt-corporate-uniform-design" aria-labelledby="t-shirt-corporate-uniform-design-title">
+        <a class="collection-backdrop" href="#work" aria-label="Close collection"></a>
+        <div class="collection-dialog" role="dialog" aria-modal="true">
+          <div class="collection-header">
+            <div>
+              <div class="collection-tags">
+                <span>Graphic Design</span>
+                <span>T-Shirt Design</span>
+                <span>6 Images</span>
+              </div>
+              <h2 id="t-shirt-corporate-uniform-design-title">T-Shirt &amp; Corporate Uniform Design</h2>
+              <p>Designed both casual company T-shirts and formal corporate uniforms, ensuring they aligned with the brand identity and professional image.</p>
+            </div>
+            <a class="collection-close" href="#work" aria-label="Close collection">
+              <i data-lucide="x"></i>
+            </a>
+          </div>
+
+          <div class="collection-gallery" aria-label="T-Shirt &amp; Corporate Uniform Design image gallery">
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/t-shirt-corporate-uniform-design/may-ouson-care-t-c.jpg" alt="May [Ouson Care]T恤C.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/t-shirt-corporate-uniform-design/ouson-new-shirt-page-1-image-0001.jpg" alt="[OUSON] New Shirt_Page_1_Image_0001.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/t-shirt-corporate-uniform-design/ouson-new-shirt-page-2-image-0001.jpg" alt="[OUSON] New Shirt_Page_2_Image_0001.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/t-shirt-corporate-uniform-design/ouson-new-shirt-page-3-image-0001.jpg" alt="[OUSON] New Shirt_Page_3_Image_0001.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/t-shirt-corporate-uniform-design/ouson-new-shirt-page-4-image-0001.jpg" alt="[OUSON] New Shirt_Page_4_Image_0001.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/t-shirt-corporate-uniform-design/ouson-new-shirt-page-5-image-0001.jpg" alt="[OUSON] New Shirt_Page_5_Image_0001.jpg" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-modal" id="collection-physical-voucher-design" aria-labelledby="physical-voucher-design-title">
+        <a class="collection-backdrop" href="#work" aria-label="Close collection"></a>
+        <div class="collection-dialog" role="dialog" aria-modal="true">
+          <div class="collection-header">
+            <div>
+              <div class="collection-tags">
+                <span>Graphic Design</span>
+                <span>Voucher Design</span>
+                <span>6 Images</span>
+              </div>
+              <h2 id="physical-voucher-design-title">Physical Voucher Design</h2>
+              <p>Designed promotional campaign vouchers that clearly communicated campaign details, enabling customers to easily understand promotional offers and redeem vouchers.</p>
+            </div>
+            <a class="collection-close" href="#work" aria-label="Close collection">
+              <i data-lucide="x"></i>
+            </a>
+          </div>
+
+          <div class="collection-gallery" aria-label="Physical Voucher Design image gallery">
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/physical-voucher-design/voucher-hari-raya-front-page.jpg" alt="[Voucher] Hari Raya_FRONT PAGE.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/physical-voucher-design/voucher-hari-raya-back-page.jpg" alt="[Voucher] Hari Raya_BACK PAGE.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/physical-voucher-design/ouson-care-website-voucher-01.jpg" alt="ouson+ care - website voucher-01.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/physical-voucher-design/ouson-care-website-voucher-02.jpg" alt="ouson+ care - website voucher-02.jpg" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/physical-voucher-design/ouson-care-website-voucher-01.png" alt="Ouson+ Care Website Voucher -01.png" />
+            </figure>
+            <figure>
+              <img loading="lazy" decoding="async" src="assets/work-web/physical-voucher-design/ouson-care-website-voucher-02.png" alt="Ouson+ Care Website Voucher -02.png" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <div class="image-lightbox" aria-hidden="true">
+        <button class="image-lightbox-backdrop" type="button" aria-label="Close image preview"></button>
+        <div class="image-lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
+          <button class="image-lightbox-close" type="button" aria-label="Close image preview">
+            <i data-lucide="x"></i>
+          </button>
+          <img src="" alt="" />
+          <p></p>
+        </div>
+      </div>
+
       <section class="section contact-section" id="contact">
         <div class="container contact-panel">
           <div>
@@ -573,6 +849,7 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260705-hero-expertise"></script>
+    <script src="script.js?v=20260707-five-collections"></script>
+    <script src="experience.js?v=20260710-reactbits"></script>
   </body>
 </html>
