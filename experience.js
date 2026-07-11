@@ -61,7 +61,7 @@
     }, 24);
   }
 
-  const interactiveCards = document.querySelectorAll(".expertise-card, .project-card, .project-tabs");
+  const interactiveCards = document.querySelectorAll(".expertise-card, .project-card, .project-tabs, .tool-group");
   interactiveCards.forEach((card) => {
     card.classList.add("spotlight-card", "cursor-target");
 
@@ -176,13 +176,21 @@
   window.addEventListener("resize", resizeCanvas);
   resizeCanvas();
 
-  const drawGlow = (x, y, radius, color) => {
-    const gradient = context.createRadialGradient(x, y, 0, x, y, radius);
+  const drawFluidBlob = (x, y, radiusX, radiusY, color, phase) => {
+    context.save();
+    context.translate(x, y);
+    context.rotate(Math.sin(phase) * 0.16);
+    context.scale(1, radiusY / radiusX);
+    const gradient = context.createRadialGradient(0, 0, radiusX * 0.08, 0, 0, radiusX);
     gradient.addColorStop(0, color);
-    gradient.addColorStop(0.48, color.replace(/[^,]+\)$/, "0.07)"));
+    gradient.addColorStop(0.4, color.replace(/0\.\d+\)$/, "0.11)"));
+    gradient.addColorStop(0.72, color.replace(/0\.\d+\)$/, "0.035)"));
     gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
     context.fillStyle = gradient;
-    context.fillRect(x - radius, y - radius, radius * 2, radius * 2);
+    context.beginPath();
+    context.arc(0, 0, radiusX, 0, Math.PI * 2);
+    context.fill();
+    context.restore();
   };
 
   const renderAmbient = (time) => {
@@ -192,26 +200,11 @@
     context.fillRect(0, 0, width, height);
     context.globalCompositeOperation = "screen";
 
-    drawGlow(width * (0.18 + Math.sin(seconds) * 0.04), height * 0.24, Math.max(width, height) * 0.48, "rgba(38, 91, 173, 0.22)");
-    drawGlow(width * (0.79 + Math.cos(seconds * 0.8) * 0.05), height * (0.22 + Math.sin(seconds * 1.1) * 0.05), Math.max(width, height) * 0.42, "rgba(121, 55, 196, 0.24)");
-    drawGlow(width * (0.54 + (mouseX - 0.5) * 0.08), height * (0.74 + (mouseY - 0.5) * 0.06), Math.max(width, height) * 0.34, "rgba(20, 135, 128, 0.12)");
-
-    context.lineWidth = 0.7;
-    for (let line = 0; line < 4; line += 1) {
-      context.beginPath();
-      context.strokeStyle = `rgba(${line % 2 ? "139, 92, 246" : "56, 212, 208"}, ${0.055 - line * 0.007})`;
-      const offset = line * 88;
-      context.moveTo(-120, height * 0.44 + offset);
-      context.bezierCurveTo(
-        width * 0.22,
-        height * (0.22 + Math.sin(seconds + line) * 0.05) + offset,
-        width * 0.68,
-        height * (0.68 + Math.cos(seconds * 0.7 + line) * 0.04) - offset,
-        width + 120,
-        height * 0.36 + offset * 0.2,
-      );
-      context.stroke();
-    }
+    const scale = Math.max(width, height);
+    drawFluidBlob(width * (0.12 + Math.sin(seconds * 0.83) * 0.07), height * (0.22 + Math.cos(seconds * 0.62) * 0.06), scale * 0.42, scale * 0.25, "rgba(23, 156, 151, 0.16)", seconds);
+    drawFluidBlob(width * (0.88 + Math.cos(seconds * 0.7) * 0.06), height * (0.25 + Math.sin(seconds * 0.54) * 0.08), scale * 0.4, scale * 0.3, "rgba(111, 83, 224, 0.18)", seconds + 1.7);
+    drawFluidBlob(width * (0.48 + Math.sin(seconds * 0.42) * 0.13), height * (0.82 + Math.cos(seconds * 0.58) * 0.08), scale * 0.35, scale * 0.2, "rgba(35, 115, 184, 0.13)", seconds + 3.1);
+    drawFluidBlob(width * (0.55 + (mouseX - 0.5) * 0.12), height * (0.46 + (mouseY - 0.5) * 0.1), scale * 0.18, scale * 0.12, "rgba(43, 203, 183, 0.09)", seconds + 4.2);
 
     context.globalCompositeOperation = "source-over";
     ambientFrame = window.requestAnimationFrame(renderAmbient);
