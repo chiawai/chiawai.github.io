@@ -729,7 +729,9 @@ h1 {
 
 .project-card {
   --accent-rgb: 139, 92, 246;
-  min-height: 252px;
+  min-height: 300px;
+  grid-template-rows: auto auto minmax(54px, 1fr) 34px;
+  row-gap: 10px;
   padding: 17px;
   overflow: hidden;
   border-color: rgba(173, 190, 225, 0.18);
@@ -740,12 +742,22 @@ h1 {
   transition: border-color 220ms ease, box-shadow 220ms ease, transform 180ms ease-out;
 }
 
-.project-card.project-image-card {
-  background-image:
-    linear-gradient(180deg, rgba(3, 6, 14, 0.08) 0%, rgba(3, 6, 14, 0.34) 38%, rgba(3, 6, 14, 0.92) 100%),
-    var(--project-image);
-  background-position: center;
-  background-size: cover;
+.project-track .project-card:not(.project-image-card) {
+  background-image: none;
+}
+
+.project-track .project-card.project-image-card {
+  min-height: 350px;
+  padding-top: 154px;
+  background-color: #080d19;
+  background-image: var(--project-image);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 138px;
+}
+
+.project-card.project-image-card::before {
+  background: linear-gradient(180deg, transparent 0, transparent 108px, rgba(8, 13, 25, 0.88) 132px, #080d19 146px);
 }
 
 .project-commerce { --accent-rgb: 255, 158, 82; }
@@ -782,13 +794,14 @@ h1 {
 }
 
 .project-card h3 {
-  max-width: 260px;
-  font-size: 18px;
+  max-width: 100%;
+  font-size: 17px;
   font-weight: 600;
+  line-height: 1.16;
 }
 
 .project-card p {
-  color: rgba(214, 222, 237, 0.68);
+  color: rgba(222, 229, 241, 0.72);
   font-size: 11px;
   line-height: 1.5;
 }
