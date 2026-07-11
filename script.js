@@ -263,6 +263,25 @@ const renderGraphicProject = (project, showBack = true) => {
 const renderGraphicInlineLibrary = (data) => {
   if (!graphicInlineLibrary) return;
   const projectLookup = new Map(data.projects.map((project) => [project.id, project]));
+  const renderProjectPreview = (project) => {
+    const previewImages = project.images.slice(0, 3);
+    const galleryClass = previewImages.length > 1 ? " is-gallery" : "";
+    return `
+      <span class="graphic-inline-thumb${galleryClass}">
+        <span class="graphic-inline-preview-grid">
+          ${previewImages
+            .map(
+              (image, index) => `<img loading="lazy" decoding="async" src="${escapeLibraryHtml(image.src)}" alt="${escapeLibraryHtml(image.alt || `${project.title} preview ${index + 1}`)}">`,
+            )
+            .join("")}
+        </span>
+        <span class="graphic-inline-gallery-badge">
+          <i data-lucide="images"></i>
+          Project Gallery · ${project.images.length} image${project.images.length === 1 ? "" : "s"}
+        </span>
+      </span>
+    `;
+  };
   graphicInlineLibrary.innerHTML = data.groups
     .map((group) => {
       const projectsInGroup = group.projectIds.map((id) => projectLookup.get(id)).filter(Boolean);
@@ -288,16 +307,13 @@ const renderGraphicInlineLibrary = (data) => {
               .map(
                 (project) => `
                   <button class="graphic-inline-card" type="button" data-inline-graphic-project="${escapeLibraryHtml(project.id)}">
-                    <span class="graphic-inline-thumb">
-                      ${project.thumbnail ? `<img loading="lazy" decoding="async" src="${escapeLibraryHtml(project.thumbnail)}" alt="">` : ""}
-                    </span>
+                    ${renderProjectPreview(project)}
                     <span class="graphic-inline-copy">
                       <small>${escapeLibraryHtml(project.collectionLabel)}</small>
                       <strong>${escapeLibraryHtml(project.title)}</strong>
                       <p>${escapeLibraryHtml(project.summary)}</p>
-                      <em>${project.images.length} image${project.images.length === 1 ? "" : "s"}</em>
+                      <span class="graphic-inline-cta">View full project <i data-lucide="arrow-right"></i></span>
                     </span>
-                    <i data-lucide="arrow-up-right"></i>
                   </button>
                 `,
               )

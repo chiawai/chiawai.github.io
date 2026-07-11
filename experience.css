@@ -712,10 +712,13 @@ h1 {
 }
 
 .project-tab {
-  min-height: 40px;
+  min-height: 48px;
+  padding: 8px 10px;
   border-radius: 8px;
   font-size: 10px;
   font-weight: 500;
+  line-height: 1.2;
+  white-space: normal;
 }
 
 .project-tab.active {
@@ -935,7 +938,7 @@ h1 {
 .graphic-inline-card {
   position: relative;
   display: grid;
-  grid-template-rows: 230px minmax(148px, auto);
+  grid-template-rows: 230px minmax(176px, auto);
   padding: 0;
   overflow: hidden;
   border: 1px solid rgba(158, 180, 223, 0.16);
@@ -953,36 +956,88 @@ h1 {
 }
 
 .graphic-inline-thumb {
+  position: relative;
   display: grid;
   overflow: hidden;
   place-items: center;
-  padding: 12px;
+  padding: 10px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(235, 238, 244, 0.96));
 }
 
-.graphic-inline-thumb img {
+.graphic-inline-preview-grid {
+  display: grid;
   width: 100%;
   height: 100%;
+  gap: 6px;
+  grid-template-columns: 1fr;
+}
+
+.graphic-inline-thumb.is-gallery .graphic-inline-preview-grid {
+  grid-template-columns: minmax(0, 1.65fr) minmax(74px, 0.75fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.graphic-inline-preview-grid img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(15, 23, 42, 0.08));
   transition: transform 300ms ease;
 }
 
-.graphic-inline-card:hover .graphic-inline-thumb img { transform: scale(1.025); }
+.graphic-inline-thumb.is-gallery .graphic-inline-preview-grid img:first-child { grid-row: 1 / -1; }
+.graphic-inline-card:hover .graphic-inline-preview-grid img { transform: scale(1.018); }
+
+.graphic-inline-gallery-badge {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(5, 9, 18, 0.84);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.26);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.graphic-inline-gallery-badge svg { width: 12px; height: 12px; }
 
 .graphic-inline-copy {
   display: grid;
-  align-content: start;
+  grid-template-rows: auto auto 1fr auto;
+  align-content: stretch;
   gap: 8px;
-  padding: 16px 48px 16px 16px;
+  padding: 16px;
 }
 
 .graphic-inline-copy small { color: rgba(126, 153, 255, 0.9); font-size: 9px; }
 .graphic-inline-copy strong { font-size: 16px; line-height: 1.2; }
 .graphic-inline-copy p { color: rgba(207, 217, 235, 0.62); font-size: 10px; line-height: 1.5; }
-.graphic-inline-copy em { color: rgba(195, 207, 228, 0.46); font-size: 9px; font-style: normal; }
-.graphic-inline-card > svg { position: absolute; right: 16px; bottom: 18px; width: 16px; height: 16px; }
+.graphic-inline-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 11px;
+  border-top: 1px solid rgba(141, 166, 219, 0.13);
+  color: rgba(232, 237, 248, 0.9);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.graphic-inline-cta svg { width: 14px; height: 14px; transition: transform 180ms ease; }
+.graphic-inline-card:hover .graphic-inline-cta svg { transform: translateX(3px); }
 .graphic-inline-loading { grid-column: 1 / -1; padding: 60px 0; color: rgba(210, 220, 238, 0.62); text-align: center; }
 
 .graphic-library {
