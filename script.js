@@ -2,6 +2,7 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
 const tabs = document.querySelectorAll(".project-tab");
 const projects = document.querySelectorAll(".project-card");
+const graphicInlineLibrary = document.querySelector("#graphicInlineLibrary");
 const revealItems = document.querySelectorAll(".expertise-card, .project-card, .contact-panel");
 const sections = document.querySelectorAll("#top, #expertise, #work, #contact");
 const galleryImages = document.querySelectorAll(".collection-gallery img");
@@ -97,6 +98,10 @@ const applyProjectFilter = (filter) => {
       });
     }
   });
+
+  if (graphicInlineLibrary) {
+    graphicInlineLibrary.hidden = filter !== "design";
+  }
 };
 
 tabs.forEach((tab) => {
@@ -228,12 +233,12 @@ const renderGraphicGroup = (group) => {
   window.lucide?.createIcons();
 };
 
-const renderGraphicProject = (project) => {
+const renderGraphicProject = (project, showBack = true) => {
   if (!graphicLibraryContent) return;
   graphicLibraryEyebrow.textContent = project.collectionLabel;
   graphicLibraryTitle.textContent = project.title;
   graphicLibraryDescription.textContent = project.summary;
-  graphicLibraryBack.hidden = false;
+  graphicLibraryBack.hidden = !showBack;
   graphicLibraryContent.innerHTML = `
     <div class="graphic-project-summary">
       <span>${project.images.length} image${project.images.length === 1 ? "" : "s"}</span>
@@ -253,6 +258,56 @@ const renderGraphicProject = (project) => {
     </div>
   `;
   graphicLibraryContent.scrollTop = 0;
+};
+
+const renderGraphicInlineLibrary = (data) => {
+  if (!graphicInlineLibrary) return;
+  const projectLookup = new Map(data.projects.map((project) => [project.id, project]));
+  graphicInlineLibrary.innerHTML = data.groups
+    .map((group) => {
+      const projectsInGroup = group.projectIds.map((id) => projectLookup.get(id)).filter(Boolean);
+      const scopeLabels = group.scopeAreas?.length ? group.scopeAreas : group.collectionLabels;
+      return `
+        <section class="graphic-inline-section" aria-labelledby="graphic-inline-${escapeLibraryHtml(group.id)}">
+          <header class="graphic-inline-heading">
+            <div>
+              <small>Graphic Design · Group ${escapeLibraryHtml(group.number)}</small>
+              <h3 id="graphic-inline-${escapeLibraryHtml(group.id)}">${escapeLibraryHtml(group.title)}</h3>
+              <p>${escapeLibraryHtml(group.description)}</p>
+            </div>
+            <div class="graphic-inline-counts">
+              <span>${group.projectCount} projects</span>
+              <span>${group.imageCount} images</span>
+            </div>
+          </header>
+          <div class="graphic-inline-scope">
+            ${scopeLabels.map((label) => `<span>${escapeLibraryHtml(label)}</span>`).join("")}
+          </div>
+          <div class="graphic-inline-grid">
+            ${projectsInGroup
+              .map(
+                (project) => `
+                  <button class="graphic-inline-card" type="button" data-inline-graphic-project="${escapeLibraryHtml(project.id)}">
+                    <span class="graphic-inline-thumb">
+                      ${project.thumbnail ? `<img loading="lazy" decoding="async" src="${escapeLibraryHtml(project.thumbnail)}" alt="">` : ""}
+                    </span>
+                    <span class="graphic-inline-copy">
+                      <small>${escapeLibraryHtml(project.collectionLabel)}</small>
+                      <strong>${escapeLibraryHtml(project.title)}</strong>
+                      <p>${escapeLibraryHtml(project.summary)}</p>
+                      <em>${project.images.length} image${project.images.length === 1 ? "" : "s"}</em>
+                    </span>
+                    <i data-lucide="arrow-up-right"></i>
+                  </button>
+                `,
+              )
+              .join("")}
+          </div>
+        </section>
+      `;
+    })
+    .join("");
+  window.lucide?.createIcons();
 };
 
 document.querySelectorAll("[data-graphic-group]").forEach((card) => {
@@ -284,6 +339,16 @@ graphicLibraryContent?.addEventListener("click", (event) => {
   }
 });
 
+graphicInlineLibrary?.addEventListener("click", (event) => {
+  const projectButton = event.target.closest("[data-inline-graphic-project]");
+  if (!projectButton || !graphicLibraryData) return;
+  const project = graphicLibraryData.projects.find((item) => item.id === projectButton.dataset.inlineGraphicProject);
+  if (!project) return;
+  activeGraphicGroup = null;
+  openGraphicLibrary();
+  renderGraphicProject(project, false);
+});
+
 graphicLibraryBack?.addEventListener("click", () => {
   if (activeGraphicGroup) renderGraphicGroup(activeGraphicGroup);
 });
@@ -295,3 +360,11 @@ document.addEventListener("keydown", (event) => {
     closeGraphicLibrary();
   }
 });
+
+loadGraphicLibrary()
+  .then(renderGraphicInlineLibrary)
+  .catch((error) => {
+    if (graphicInlineLibrary) {
+      graphicInlineLibrary.innerHTML = `<div class="graphic-inline-loading">${escapeLibraryHtml(error.message)}</div>`;
+    }
+  });
