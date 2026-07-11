@@ -61,7 +61,7 @@
     }, 24);
   }
 
-  const interactiveCards = document.querySelectorAll(".expertise-card, .project-card, .project-tabs, .tool-group");
+  const interactiveCards = document.querySelectorAll(".expertise-card, .project-card, .project-tabs");
   interactiveCards.forEach((card) => {
     card.classList.add("spotlight-card", "cursor-target");
 
