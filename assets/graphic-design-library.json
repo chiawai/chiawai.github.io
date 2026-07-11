@@ -1,0 +1,1056 @@
+{
+  "generatedFrom": "/Users/chiawai_01/Documents/Codex/2026-07-04/w/outputs/portfolio-content-inbox/data/content.json",
+  "groups": [
+    {
+      "id": "campaign-digital-marketing",
+      "number": "01",
+      "title": "Campaign & Digital Marketing",
+      "description": "Promotional, awareness, event and conversion-focused creative work.",
+      "collections": [
+        "campaign-design",
+        "facebook-ads-content",
+        "social-media-post",
+        "flyer-design",
+        "voucher-design",
+        "packet-design"
+      ],
+      "collectionLabels": [
+        "Integrated Marketing Campaign Design",
+        "Facebook Advertising Creative Design",
+        "Social Media Content Design",
+        "Campaign & Promotional Flyer Design",
+        "Promotional Voucher Design",
+        "Festive Money Packet Design"
+      ],
+      "projectIds": [
+        "graphic-design/campaign-design/ouson-integrated-campaign-design",
+        "graphic-design/facebook-ads-content/ouson-facebook-advertising-creative-series",
+        "graphic-design/flyer-design/ouson-campaign-promotional-flyer-design",
+        "graphic-design/packet-design/ouson-chinese-new-year-money-packet-design",
+        "graphic-design/packet-design/ouson-hari-raya-aidilfitri-money-packet-design",
+        "graphic-design/social-media-post/ouson-corporate-announcement-design",
+        "graphic-design/social-media-post/ouson-festive-social-media-campaigns",
+        "graphic-design/social-media-post/ouson-social-media-content-design",
+        "graphic-design/voucher-design/ouson-promotional-gift-voucher-design"
+      ],
+      "projectCount": 9,
+      "imageCount": 29
+    },
+    {
+      "id": "ecommerce-product-communication",
+      "number": "02",
+      "title": "E-Commerce & Product Communication",
+      "description": "Marketplace-ready visuals and structured product communication across the customer journey.",
+      "collections": [
+        "sku-design",
+        "product-brochure",
+        "packaging-design",
+        "product-label-design",
+        "price-list-design",
+        "after-sale-use-artwork"
+      ],
+      "collectionLabels": [
+        "E-Commerce Product Listing Design",
+        "Product Brochure & Catalogue Design",
+        "Product Packaging Design",
+        "Product Label & Information Design",
+        "Price List Design",
+        "After-Sales Support & Instructional Design"
+      ],
+      "projectIds": [
+        "graphic-design/after-sale-use-artwork/ouson-internal-communication-operational-materials",
+        "graphic-design/packaging-design/ouson-medical-product-packaging-design",
+        "graphic-design/price-list-design/ouson-reseller-price-list-design",
+        "graphic-design/product-brochure/ouson-brand-event-product-brochure",
+        "graphic-design/product-brochure/ouson-corporate-product-catalogue",
+        "graphic-design/product-brochure/ouson-individual-product-brochure-series",
+        "graphic-design/product-label-design/ouson-hygiene-spray-product-label-design",
+        "graphic-design/sku-design/e-commerce-sku-product-image-design"
+      ],
+      "projectCount": 8,
+      "imageCount": 59
+    },
+    {
+      "id": "brand-identity-merchandise",
+      "number": "03",
+      "title": "Brand Identity & Merchandise",
+      "description": "Identity systems and branded touchpoints designed for recognition and consistency.",
+      "collections": [
+        "character-design",
+        "logo-design",
+        "merchandising-design",
+        "t-shirt-design",
+        "name-card-design",
+        "letterhead-design"
+      ],
+      "collectionLabels": [
+        "Brand Mascot & IP Character Design",
+        "Logo Design",
+        "Brand Merchandise Design",
+        "Corporate Apparel & T-Shirt Design",
+        "Corporate Business Card Design",
+        "Letterhead Design"
+      ],
+      "projectIds": [
+        "graphic-design/character-design/ouson-brand-mascot-ip-character-design",
+        "graphic-design/letterhead-design/reanneq-corporate-letterhead-design",
+        "graphic-design/logo-design/rq-distribution-subsidiary-logo-design",
+        "graphic-design/merchandising-design/ouson-brand-ip-merchandise-design",
+        "graphic-design/name-card-design/ouson-multi-brand-corporate-name-card-design",
+        "graphic-design/t-shirt-design/ouson-casual-brand-t-shirt-design",
+        "graphic-design/t-shirt-design/ouson-corporate-uniform-design"
+      ],
+      "projectCount": 7,
+      "imageCount": 18
+    },
+    {
+      "id": "corporate-internal-communication",
+      "number": "04",
+      "title": "Corporate & Internal Communication",
+      "description": "Clear internal information that supports staff, operations, training and reference workflows.",
+      "collections": [
+        "after-sale-use-artwork"
+      ],
+      "scopeAreas": [
+        "Internal Communication & Information Design",
+        "Corporate Notice Design",
+        "Operational Materials Design",
+        "Staff Training & Reference Materials"
+      ],
+      "collectionLabels": [
+        "After-Sales Support & Instructional Design"
+      ],
+      "projectIds": [
+        "graphic-design/after-sale-use-artwork/ouson-internal-communication-operational-materials"
+      ],
+      "projectCount": 1,
+      "imageCount": 4
+    }
+  ],
+  "projects": [
+    {
+      "id": "graphic-design/after-sale-use-artwork/ouson-internal-communication-operational-materials",
+      "slug": "ouson-internal-communication-operational-materials",
+      "title": "OUSON Internal Communication & Operational Materials",
+      "summary": "Internal reference materials designed to support staff training, product troubleshooting, workplace safety and daily operations.",
+      "collection": "after-sale-use-artwork",
+      "collectionLabel": "After-Sales Support & Instructional Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-internal-communication-operational-materials/01-office-use-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-internal-communication-operational-materials/01-office-use-design-01.webp",
+          "alt": "Office Use Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-internal-communication-operational-materials/02-office-use-design-02.webp",
+          "alt": "Office Use Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-internal-communication-operational-materials/03-office-use-design-03.webp",
+          "alt": "Office Use Design-03.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-internal-communication-operational-materials/04-office-use-design-04.webp",
+          "alt": "Office Use Design-04.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/campaign-design/ouson-integrated-campaign-design",
+      "slug": "ouson-integrated-campaign-design",
+      "title": "OUSON Integrated Campaign Design",
+      "summary": "Campaign visuals created for sales promotions, brand collaborations, offline events, trade-in programmes and other company marketing initiatives.",
+      "collection": "campaign-design",
+      "collectionLabel": "Integrated Marketing Campaign Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-integrated-campaign-design/01-campaign-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-integrated-campaign-design/01-campaign-design-01.webp",
+          "alt": "Campaign Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-integrated-campaign-design/02-campaign-design-02.webp",
+          "alt": "Campaign Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-integrated-campaign-design/03-campaign-design-03.webp",
+          "alt": "Campaign Design-03.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-integrated-campaign-design/04-campaign-design-04.webp",
+          "alt": "Campaign Design-04.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-integrated-campaign-design/05-campaign-design-06.webp",
+          "alt": "Campaign Design-06.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-integrated-campaign-design/06-campaign-design-07.webp",
+          "alt": "Campaign Design-07.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-integrated-campaign-design/07-campaign-design-05.webp",
+          "alt": "Campaign Design-05.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/character-design/ouson-brand-mascot-ip-character-design",
+      "slug": "ouson-brand-mascot-ip-character-design",
+      "title": "OUSON Brand Mascot & IP Character Design",
+      "summary": "An original brand mascot developed from initial character concept to ongoing designs for social media, merchandise and trademark applications.",
+      "collection": "character-design",
+      "collectionLabel": "Brand Mascot & IP Character Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-brand-mascot-ip-character-design/01-character-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-brand-mascot-ip-character-design/01-character-design-01.webp",
+          "alt": "Character Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-brand-mascot-ip-character-design/02-character-design-02.webp",
+          "alt": "Character Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-brand-mascot-ip-character-design/03-character-design-03.webp",
+          "alt": "Character Design-03.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/facebook-ads-content/ouson-facebook-advertising-creative-series",
+      "slug": "ouson-facebook-advertising-creative-series",
+      "title": "OUSON Facebook Advertising Creative Series",
+      "summary": "Facebook ad creatives designed to increase product visibility, audience engagement and sales across targeted campaigns.",
+      "collection": "facebook-ads-content",
+      "collectionLabel": "Facebook Advertising Creative Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-facebook-advertising-creative-series/01-facebook-product-ads-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-facebook-advertising-creative-series/01-facebook-product-ads-design-01.webp",
+          "alt": "Facebook Product Ads Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-facebook-advertising-creative-series/02-facebook-product-ads-design-02.webp",
+          "alt": "Facebook Product Ads Design-02.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/flyer-design/ouson-campaign-promotional-flyer-design",
+      "slug": "ouson-campaign-promotional-flyer-design",
+      "title": "OUSON Campaign & Promotional Flyer Design",
+      "summary": "Promotional flyers designed for marketing campaigns, product offers and offline booth activities across print and digital use.",
+      "collection": "flyer-design",
+      "collectionLabel": "Campaign & Promotional Flyer Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-campaign-promotional-flyer-design/01-flyer-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-campaign-promotional-flyer-design/01-flyer-design-01.webp",
+          "alt": "Flyer Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-campaign-promotional-flyer-design/02-flyer-design-02.webp",
+          "alt": "Flyer Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-campaign-promotional-flyer-design/03-flyer-design-03.webp",
+          "alt": "Flyer Design-03.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-campaign-promotional-flyer-design/04-flyer-design-04.webp",
+          "alt": "Flyer Design-04.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-campaign-promotional-flyer-design/05-flyer-design-05.webp",
+          "alt": "Flyer Design-05.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-campaign-promotional-flyer-design/06-flyer-design-06.webp",
+          "alt": "Flyer Design-06.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-campaign-promotional-flyer-design/07-flyer-design-07.webp",
+          "alt": "Flyer Design-07.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/letterhead-design/reanneq-corporate-letterhead-design",
+      "slug": "reanneq-corporate-letterhead-design",
+      "title": "REANNEQ Corporate Letterhead Design",
+      "summary": "A professional letterhead system designed for official company correspondence while maintaining a consistent corporate identity.",
+      "collection": "letterhead-design",
+      "collectionLabel": "Letterhead Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/reanneq-corporate-letterhead-design/01-letterhead-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/reanneq-corporate-letterhead-design/01-letterhead-design-01.webp",
+          "alt": "Letterhead Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/reanneq-corporate-letterhead-design/02-letterhead-design-02.webp",
+          "alt": "Letterhead Design-02.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/logo-design/rq-distribution-subsidiary-logo-design",
+      "slug": "rq-distribution-subsidiary-logo-design",
+      "title": "RQ Distribution Subsidiary Logo Design",
+      "summary": "A corporate logo created for the company’s subsidiary, establishing a professional identity aligned with the parent company’s business direction.",
+      "collection": "logo-design",
+      "collectionLabel": "Logo Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/rq-distribution-subsidiary-logo-design/01-logo-design.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/rq-distribution-subsidiary-logo-design/01-logo-design.webp",
+          "alt": "Logo Design.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/merchandising-design/ouson-brand-ip-merchandise-design",
+      "slug": "ouson-brand-ip-merchandise-design",
+      "title": "OUSON Brand & IP Merchandise Design",
+      "summary": "A branded merchandise collection featuring OUSON’s visual identity and mascot across bags, pouches, badges and keychains.",
+      "collection": "merchandising-design",
+      "collectionLabel": "Brand Merchandise Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-brand-ip-merchandise-design/01-merchandism-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-brand-ip-merchandise-design/01-merchandism-design-01.webp",
+          "alt": "Merchandism Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-brand-ip-merchandise-design/02-merchandism-design-02.webp",
+          "alt": "Merchandism Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-brand-ip-merchandise-design/03-merchandism-design-03.webp",
+          "alt": "Merchandism Design-03.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-brand-ip-merchandise-design/04-merchandism-design-04.webp",
+          "alt": "Merchandism Design-04.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-brand-ip-merchandise-design/05-merchandism-design-05.webp",
+          "alt": "Merchandism Design-05.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/name-card-design/ouson-multi-brand-corporate-name-card-design",
+      "slug": "ouson-multi-brand-corporate-name-card-design",
+      "title": "OUSON Multi-Brand Corporate Name Card Design",
+      "summary": "A unified name card system designed for the company’s main brand, related brands and Singapore subsidiary.",
+      "collection": "name-card-design",
+      "collectionLabel": "Corporate Business Card Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-multi-brand-corporate-name-card-design/01-name-card-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-multi-brand-corporate-name-card-design/01-name-card-design-01.webp",
+          "alt": "Name Card Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-multi-brand-corporate-name-card-design/02-name-card-design-02.webp",
+          "alt": "Name Card Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-multi-brand-corporate-name-card-design/03-name-card-design-03.webp",
+          "alt": "Name Card Design-03.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/packaging-design/ouson-medical-product-packaging-design",
+      "slug": "ouson-medical-product-packaging-design",
+      "title": "OUSON Medical Product Packaging Design",
+      "summary": "Product packaging designed to communicate key features, technical information and brand identity across OUSON’s medical device range.",
+      "collection": "packaging-design",
+      "collectionLabel": "Product Packaging Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-medical-product-packaging-design/01-packaging-design-04.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/01-packaging-design-04.webp",
+          "alt": "Packaging Design-04.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/02-packaging-design-06.webp",
+          "alt": "Packaging Design-06.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/03-packaging-design-05.webp",
+          "alt": "Packaging Design-05.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/04-packaging-design-02.webp",
+          "alt": "Packaging Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/05-packaging-design-01.webp",
+          "alt": "Packaging Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/06-packaging-design-03.webp",
+          "alt": "Packaging Design-03.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/07-packaging-design-07.webp",
+          "alt": "Packaging Design-07.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/08-packaging-design-08.webp",
+          "alt": "Packaging Design-08.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/09-packaging-design-10.webp",
+          "alt": "Packaging Design-10.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/10-packaging-design-11.webp",
+          "alt": "Packaging Design-11.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-medical-product-packaging-design/11-packaging-design-09.webp",
+          "alt": "Packaging Design-09.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/packet-design/ouson-chinese-new-year-money-packet-design",
+      "slug": "ouson-chinese-new-year-money-packet-design",
+      "title": "OUSON Chinese New Year Money Packet Design",
+      "summary": "Festive red packet designs combining Chinese New Year elements, brand colours and the OUSON mascot.",
+      "collection": "packet-design",
+      "collectionLabel": "Festive Money Packet Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-chinese-new-year-money-packet-design/01-money-packet-design-03.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-chinese-new-year-money-packet-design/01-money-packet-design-03.webp",
+          "alt": "Money Packet Design-03.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-chinese-new-year-money-packet-design/02-money-packet-design-02.webp",
+          "alt": "Money Packet Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-chinese-new-year-money-packet-design/03-money-packet-design-04.webp",
+          "alt": "Money Packet Design-04.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/packet-design/ouson-hari-raya-aidilfitri-money-packet-design",
+      "slug": "ouson-hari-raya-aidilfitri-money-packet-design",
+      "title": "OUSON Hari Raya Aidilfitri Money Packet Design",
+      "summary": "A festive duit raya packet designed with cultural motifs and a warm, brand-consistent visual style.",
+      "collection": "packet-design",
+      "collectionLabel": "Festive Money Packet Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-hari-raya-aidilfitri-money-packet-design/01-money-packet-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-hari-raya-aidilfitri-money-packet-design/01-money-packet-design-01.webp",
+          "alt": "Money Packet Design-01.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/price-list-design/ouson-reseller-price-list-design",
+      "slug": "ouson-reseller-price-list-design",
+      "title": "OUSON Reseller Price List Design",
+      "summary": "A structured reseller price list designed to present product pricing, minimum order quantities and carton details clearly for distribution and sales use.",
+      "collection": "price-list-design",
+      "collectionLabel": "Price List Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-reseller-price-list-design/01-price-list-design.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-reseller-price-list-design/01-price-list-design.webp",
+          "alt": "Price List Design.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/product-brochure/ouson-brand-event-product-brochure",
+      "slug": "ouson-brand-event-product-brochure",
+      "title": "OUSON Brand & Event Product Brochure",
+      "summary": "A brand-wide product brochure featuring selected products, created for exhibitions, events and offline promotional use.",
+      "collection": "product-brochure",
+      "collectionLabel": "Product Brochure & Catalogue Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-brand-event-product-brochure/01-product-brochure-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-brand-event-product-brochure/01-product-brochure-design-01.webp",
+          "alt": "Product Brochure Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-brand-event-product-brochure/02-product-brochure-design-02.webp",
+          "alt": "Product Brochure Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-brand-event-product-brochure/03-product-brochure-design-03.webp",
+          "alt": "Product Brochure Design-03.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/product-brochure/ouson-corporate-product-catalogue",
+      "slug": "ouson-corporate-product-catalogue",
+      "title": "OUSON Corporate Product Catalogue",
+      "summary": "A comprehensive company and brand catalogue created for print, sales presentations and general corporate use.",
+      "collection": "product-brochure",
+      "collectionLabel": "Product Brochure & Catalogue Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-corporate-product-catalogue/01-product-brochure-design-04.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-corporate-product-catalogue/01-product-brochure-design-04.webp",
+          "alt": "Product Brochure Design-04.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-corporate-product-catalogue/02-product-brochure-design-05.webp",
+          "alt": "Product Brochure Design-05.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-corporate-product-catalogue/03-product-brochure-design-06.webp",
+          "alt": "Product Brochure Design-06.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-corporate-product-catalogue/04-product-brochure-design-07.webp",
+          "alt": "Product Brochure Design-07.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/product-brochure/ouson-individual-product-brochure-series",
+      "slug": "ouson-individual-product-brochure-series",
+      "title": "OUSON Individual Product Brochure Series",
+      "summary": "A series of dedicated brochures designed to communicate each product’s features, specifications and key benefits.",
+      "collection": "product-brochure",
+      "collectionLabel": "Product Brochure & Catalogue Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-individual-product-brochure-series/01-product-brochure-design-08.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-individual-product-brochure-series/01-product-brochure-design-08.webp",
+          "alt": "Product Brochure Design-08.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-individual-product-brochure-series/02-product-brochure-design-09.webp",
+          "alt": "Product Brochure Design-09.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-individual-product-brochure-series/03-product-brochure-design-10.webp",
+          "alt": "Product Brochure Design-10.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-individual-product-brochure-series/04-product-brochure-design-11.webp",
+          "alt": "Product Brochure Design-11.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-individual-product-brochure-series/05-product-brochure-design-12.webp",
+          "alt": "Product Brochure Design-12.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-individual-product-brochure-series/06-product-brochure-design-13.webp",
+          "alt": "Product Brochure Design-13.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-individual-product-brochure-series/07-product-brochure-design-14.webp",
+          "alt": "Product Brochure Design-14.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/product-label-design/ouson-hygiene-spray-product-label-design",
+      "slug": "ouson-hygiene-spray-product-label-design",
+      "title": "OUSON Hygiene Spray Product Label Design",
+      "summary": "A product label designed to present the brand identity, ingredients, usage directions, safety warnings and distributor information clearly.",
+      "collection": "product-label-design",
+      "collectionLabel": "Product Label & Information Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-hygiene-spray-product-label-design/01-label-design.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-hygiene-spray-product-label-design/01-label-design.webp",
+          "alt": "Label Design.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/sku-design/e-commerce-sku-product-image-design",
+      "slug": "e-commerce-sku-product-image-design",
+      "title": "E-Commerce SKU Product Image Design",
+      "summary": "Platform-optimised SKU visuals designed for home healthcare devices, branded merchandise and personal care products across e-commerce marketplaces.",
+      "collection": "sku-design",
+      "collectionLabel": "E-Commerce Product Listing Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/e-commerce-sku-product-image-design/01-sku-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/01-sku-design-01.webp",
+          "alt": "SKU Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/02-sku-design-02.webp",
+          "alt": "SKU Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/03-sku-design-03.webp",
+          "alt": "SKU Design-03.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/04-sku-design-04.webp",
+          "alt": "SKU Design-04.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/05-sku-design-05.webp",
+          "alt": "SKU Design-05.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/06-sku-design-06.webp",
+          "alt": "SKU Design-06.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/07-sku-design-07.webp",
+          "alt": "SKU Design-07.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/08-sku-design-08.webp",
+          "alt": "SKU Design-08.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/09-sku-design-09.webp",
+          "alt": "SKU Design-09.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/10-sku-design-10.webp",
+          "alt": "SKU Design-10.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/11-sku-design-11.webp",
+          "alt": "SKU Design-11.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/12-sku-design-12.webp",
+          "alt": "SKU Design-12.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/13-sku-design-13.webp",
+          "alt": "SKU Design-13.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/14-sku-design-14.webp",
+          "alt": "SKU Design-14.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/15-sku-design-15.webp",
+          "alt": "SKU Design-15.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/16-sku-design-16.webp",
+          "alt": "SKU Design-16.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/17-sku-design-17.webp",
+          "alt": "SKU Design-17.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/18-sku-design-18.webp",
+          "alt": "SKU Design-18.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/19-sku-design-19.webp",
+          "alt": "SKU Design-19.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/20-sku-design-20.webp",
+          "alt": "SKU Design-20.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/21-sku-design-21.webp",
+          "alt": "SKU Design-21.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/22-sku-design-22.webp",
+          "alt": "SKU Design-22.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/23-sku-design-23.webp",
+          "alt": "SKU Design-23.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/24-sku-design-24.webp",
+          "alt": "SKU Design-24.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/25-sku-design-25.webp",
+          "alt": "SKU Design-25.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/26-sku-design-26.webp",
+          "alt": "SKU Design-26.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/27-sku-design-27.webp",
+          "alt": "SKU Design-27.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/e-commerce-sku-product-image-design/28-sku-design-28.webp",
+          "alt": "SKU Design-28.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/social-media-post/ouson-corporate-announcement-design",
+      "slug": "ouson-corporate-announcement-design",
+      "title": "OUSON Corporate Announcement Design",
+      "summary": "Social media announcement designs created for company updates, notices, recruitment and operational information.",
+      "collection": "social-media-post",
+      "collectionLabel": "Social Media Content Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-corporate-announcement-design/01-social-media-post-design-04.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-corporate-announcement-design/01-social-media-post-design-04.webp",
+          "alt": "Social Media Post Design-04.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/social-media-post/ouson-festive-social-media-campaigns",
+      "slug": "ouson-festive-social-media-campaigns",
+      "title": "OUSON Festive Social Media Campaigns",
+      "summary": "Seasonal and festive post designs created to celebrate key occasions while maintaining the brand’s visual identity.",
+      "collection": "social-media-post",
+      "collectionLabel": "Social Media Content Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-festive-social-media-campaigns/01-social-media-post-design-05.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-festive-social-media-campaigns/01-social-media-post-design-05.webp",
+          "alt": "Social Media Post Design-05.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-festive-social-media-campaigns/02-social-media-post-design-06.webp",
+          "alt": "Social Media Post Design-06.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/social-media-post/ouson-social-media-content-design",
+      "slug": "ouson-social-media-content-design",
+      "title": "OUSON Social Media Content Design",
+      "summary": "Branded daily posts designed to share useful health information and maintain consistent audience engagement.",
+      "collection": "social-media-post",
+      "collectionLabel": "Social Media Content Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-social-media-content-design/01-social-media-post-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-social-media-content-design/01-social-media-post-design-01.webp",
+          "alt": "Social Media Post Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-social-media-content-design/02-social-media-post-design-02.webp",
+          "alt": "Social Media Post Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-social-media-content-design/03-social-media-post-design-03.webp",
+          "alt": "Social Media Post Design-03.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/t-shirt-design/ouson-casual-brand-t-shirt-design",
+      "slug": "ouson-casual-brand-t-shirt-design",
+      "title": "OUSON Casual Brand T-Shirt Design",
+      "summary": "A casual branded T-shirt featuring the OUSON mascot, created for team activities, promotional use and merchandise applications.",
+      "collection": "t-shirt-design",
+      "collectionLabel": "Corporate Apparel & T-Shirt Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-casual-brand-t-shirt-design/01-t-shirt-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-casual-brand-t-shirt-design/01-t-shirt-design-01.webp",
+          "alt": "T-Shirt Design-01.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/t-shirt-design/ouson-corporate-uniform-design",
+      "slug": "ouson-corporate-uniform-design",
+      "title": "OUSON Corporate Uniform Design",
+      "summary": "A professional staff uniform collection designed to strengthen brand consistency across daily work, events and customer-facing activities.",
+      "collection": "t-shirt-design",
+      "collectionLabel": "Corporate Apparel & T-Shirt Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-corporate-uniform-design/01-t-shirt-design-02.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-corporate-uniform-design/01-t-shirt-design-02.webp",
+          "alt": "T-Shirt Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-corporate-uniform-design/02-t-shirt-design-03.webp",
+          "alt": "T-Shirt Design-03.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-corporate-uniform-design/03-t-shirt-design-04.webp",
+          "alt": "T-Shirt Design-04.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "graphic-design/voucher-design/ouson-promotional-gift-voucher-design",
+      "slug": "ouson-promotional-gift-voucher-design",
+      "title": "OUSON Promotional Gift Voucher Design",
+      "summary": "Promotional vouchers designed to encourage online purchases, attract customers to the website and support seasonal sales campaigns.",
+      "collection": "voucher-design",
+      "collectionLabel": "Promotional Voucher Design",
+      "featured": false,
+      "thumbnail": "assets/graphic-library/ouson-promotional-gift-voucher-design/01-voucher-design-01.webp",
+      "images": [
+        {
+          "src": "assets/graphic-library/ouson-promotional-gift-voucher-design/01-voucher-design-01.webp",
+          "alt": "Voucher Design-01.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-promotional-gift-voucher-design/02-voucher-design-02.webp",
+          "alt": "Voucher Design-02.jpg",
+          "title": "",
+          "description": ""
+        },
+        {
+          "src": "assets/graphic-library/ouson-promotional-gift-voucher-design/03-voucher-design-03.webp",
+          "alt": "Voucher Design-03.jpg",
+          "title": "",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

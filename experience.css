@@ -818,6 +818,204 @@ h1 {
   transition: transform 220ms ease, background 220ms ease;
 }
 
+.project-card .graphic-group-open {
+  display: grid;
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  padding: 0;
+  place-items: center;
+  justify-self: end;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #070b14;
+  transition: transform 220ms ease, background 220ms ease;
+}
+
+.project-card .graphic-group-open svg { width: 15px; height: 15px; }
+.project-card:hover .graphic-group-open { background: #fff; transform: rotate(-28deg); }
+
+.graphic-group-card h3 { font-size: 19px; }
+
+.graphic-library {
+  position: fixed;
+  z-index: 96;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 24px;
+}
+
+.graphic-library.is-open { display: grid; }
+
+.graphic-library-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(1, 3, 9, 0.82);
+  backdrop-filter: blur(16px);
+}
+
+.graphic-library-panel {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(1180px, 100%);
+  height: min(850px, calc(100vh - 48px));
+  overflow: hidden;
+  border: 1px solid rgba(155, 178, 225, 0.2);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(139, 92, 246, 0.14), transparent 30%),
+    radial-gradient(circle at 0% 100%, rgba(56, 212, 208, 0.08), transparent 34%),
+    rgba(5, 9, 18, 0.97);
+  box-shadow: 0 36px 120px rgba(0, 0, 0, 0.62);
+}
+
+.graphic-library-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+  padding: 28px 30px 24px;
+  border-bottom: 1px solid rgba(155, 178, 225, 0.14);
+}
+
+.graphic-library-header h2 {
+  max-width: 800px;
+  margin: 7px 0 8px;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.graphic-library-header > div > p:last-child {
+  max-width: 780px;
+  color: rgba(204, 214, 232, 0.64);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.graphic-library-close,
+.graphic-library-back {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(165, 184, 221, 0.18);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+.graphic-library-back[hidden] { visibility: hidden; }
+.graphic-library-close svg,
+.graphic-library-back svg { width: 18px; height: 18px; }
+
+.graphic-library-content {
+  overflow-y: auto;
+  padding: 24px 30px 32px;
+}
+
+.graphic-scope {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.graphic-scope span,
+.graphic-project-summary span {
+  padding: 7px 10px;
+  border: 1px solid rgba(112, 140, 218, 0.22);
+  border-radius: 999px;
+  background: rgba(91, 92, 246, 0.08);
+  color: rgba(220, 228, 244, 0.76);
+  font-size: 10px;
+}
+
+.graphic-group-summary,
+.graphic-project-summary {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 22px;
+  color: rgba(199, 210, 230, 0.62);
+  font-size: 11px;
+}
+
+.graphic-group-summary strong { color: #fff; font-size: 15px; }
+
+.graphic-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.graphic-project-item {
+  position: relative;
+  display: grid;
+  grid-template-rows: 158px minmax(118px, auto);
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(158, 180, 223, 0.16);
+  border-radius: 9px;
+  background: rgba(9, 14, 27, 0.84);
+  color: #fff;
+  text-align: left;
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.graphic-project-item:hover {
+  border-color: rgba(91, 140, 255, 0.46);
+  box-shadow: 0 20px 54px rgba(0, 0, 0, 0.3), 0 0 30px rgba(91, 140, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.graphic-project-thumb { overflow: hidden; background: #111827; }
+.graphic-project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 320ms ease; }
+.graphic-project-item:hover img { transform: scale(1.035); }
+
+.graphic-project-copy {
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  padding: 14px 44px 14px 14px;
+}
+
+.graphic-project-copy small { color: rgba(126, 153, 255, 0.9); font-size: 9px; }
+.graphic-project-copy strong { font-size: 14px; line-height: 1.22; }
+.graphic-project-copy em { color: rgba(199, 210, 230, 0.54); font-size: 9px; font-style: normal; }
+.graphic-project-item > svg { position: absolute; right: 14px; bottom: 16px; width: 16px; height: 16px; }
+
+.graphic-project-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.graphic-gallery-item {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(158, 180, 223, 0.16);
+  border-radius: 8px;
+  background: rgba(9, 14, 27, 0.84);
+}
+
+.graphic-gallery-item img { width: 100%; height: 100%; object-fit: contain; background: rgba(255, 255, 255, 0.96); }
+.graphic-gallery-item span { position: absolute; right: 9px; bottom: 9px; padding: 4px 6px; border-radius: 4px; background: rgba(3, 6, 14, 0.78); color: #fff; font-size: 9px; }
+.graphic-gallery-item:hover { border-color: rgba(91, 140, 255, 0.54); }
+.graphic-library-loading { padding: 60px 0; color: rgba(210, 220, 238, 0.66); text-align: center; }
+
+body.graphic-library-open { overflow: hidden; }
+
+.image-lightbox { z-index: 110; }
+
 .project-card:hover a {
   background: #fff;
   transform: rotate(-28deg);
@@ -1013,6 +1211,16 @@ h1 {
   .project-card {
     min-height: 268px;
   }
+
+  .graphic-library { padding: 0; }
+  .graphic-library-panel { width: 100%; height: 100%; border: 0; border-radius: 0; }
+  .graphic-library-header { grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; padding: 18px 14px 16px; }
+  .graphic-library-header h2 { font-size: 31px; }
+  .graphic-library-header > div > p:last-child { font-size: 11px; }
+  .graphic-library-content { padding: 18px 14px 24px; }
+  .graphic-project-grid { grid-template-columns: 1fr; }
+  .graphic-project-item { grid-template-rows: 180px minmax(104px, auto); }
+  .graphic-project-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 }
 
 @media (pointer: coarse), (prefers-reduced-motion: reduce) {

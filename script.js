@@ -42,19 +42,22 @@ const closeImageLightbox = () => {
   document.body.classList.remove("lightbox-open");
 };
 
+const openImageLightbox = (source, alt) => {
+  if (!imageLightbox || !imageLightboxImage || !imageLightboxCaption) return;
+  imageLightboxImage.src = source;
+  imageLightboxImage.alt = alt;
+  imageLightboxCaption.textContent = alt;
+  imageLightbox.classList.add("is-open");
+  imageLightbox.setAttribute("aria-hidden", "false");
+  document.body.classList.add("lightbox-open");
+};
+
 galleryImages.forEach((image) => {
   image.setAttribute("tabindex", "0");
   image.setAttribute("role", "button");
 
   const openImage = () => {
-    if (!imageLightbox || !imageLightboxImage || !imageLightboxCaption) return;
-
-    imageLightboxImage.src = image.currentSrc || image.src;
-    imageLightboxImage.alt = image.alt;
-    imageLightboxCaption.textContent = image.alt;
-    imageLightbox.classList.add("is-open");
-    imageLightbox.setAttribute("aria-hidden", "false");
-    document.body.classList.add("lightbox-open");
+    openImageLightbox(image.currentSrc || image.src, image.alt);
   };
 
   image.addEventListener("click", openImage);
@@ -140,5 +143,155 @@ if ("IntersectionObserver" in window) {
     { rootMargin: "-35% 0px -55% 0px", threshold: 0 },
   );
 
-  sections.forEach((section) => sectionObserver.observe(section));
+sections.forEach((section) => sectionObserver.observe(section));
 }
+
+const graphicLibrary = document.querySelector(".graphic-library");
+const graphicLibraryContent = document.querySelector("#graphicLibraryContent");
+const graphicLibraryTitle = document.querySelector("#graphicLibraryTitle");
+const graphicLibraryDescription = document.querySelector("#graphicLibraryDescription");
+const graphicLibraryEyebrow = document.querySelector("#graphicLibraryEyebrow");
+const graphicLibraryBack = document.querySelector(".graphic-library-back");
+const graphicLibraryCloseItems = document.querySelectorAll(".graphic-library-backdrop, .graphic-library-close");
+let graphicLibraryData = null;
+let activeGraphicGroup = null;
+
+const escapeLibraryHtml = (value = "") =>
+  String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+
+const loadGraphicLibrary = async () => {
+  if (graphicLibraryData) return graphicLibraryData;
+  const response = await fetch("assets/graphic-design-library.json");
+  if (!response.ok) throw new Error("Unable to load the Graphic Design library.");
+  graphicLibraryData = await response.json();
+  return graphicLibraryData;
+};
+
+const openGraphicLibrary = () => {
+  graphicLibrary?.classList.add("is-open");
+  graphicLibrary?.setAttribute("aria-hidden", "false");
+  document.body.classList.add("graphic-library-open");
+};
+
+const closeGraphicLibrary = () => {
+  graphicLibrary?.classList.remove("is-open");
+  graphicLibrary?.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("graphic-library-open");
+};
+
+const renderGraphicGroup = (group) => {
+  if (!graphicLibraryData || !graphicLibraryContent) return;
+  activeGraphicGroup = group;
+  graphicLibraryEyebrow.textContent = `GRAPHIC DESIGN · GROUP ${group.number}`;
+  graphicLibraryTitle.textContent = group.title;
+  graphicLibraryDescription.textContent = group.description;
+  graphicLibraryBack.hidden = true;
+
+  const projectLookup = new Map(graphicLibraryData.projects.map((project) => [project.id, project]));
+  const projectsInGroup = group.projectIds.map((id) => projectLookup.get(id)).filter(Boolean);
+  const scopeLabels = group.scopeAreas?.length ? group.scopeAreas : group.collectionLabels;
+
+  graphicLibraryContent.innerHTML = `
+    <div class="graphic-scope" aria-label="Work types">
+      ${scopeLabels.map((label) => `<span>${escapeLibraryHtml(label)}</span>`).join("")}
+    </div>
+    <div class="graphic-group-summary">
+      <span><strong>${group.projectCount}</strong> projects</span>
+      <span><strong>${group.imageCount}</strong> images</span>
+    </div>
+    <div class="graphic-project-grid">
+      ${projectsInGroup
+        .map(
+          (project) => `
+            <button class="graphic-project-item" type="button" data-graphic-project="${escapeLibraryHtml(project.id)}">
+              <span class="graphic-project-thumb">
+                ${project.thumbnail ? `<img loading="lazy" decoding="async" src="${escapeLibraryHtml(project.thumbnail)}" alt="">` : ""}
+              </span>
+              <span class="graphic-project-copy">
+                <small>${escapeLibraryHtml(project.collectionLabel)}</small>
+                <strong>${escapeLibraryHtml(project.title)}</strong>
+                <em>${project.images.length} image${project.images.length === 1 ? "" : "s"}</em>
+              </span>
+              <i data-lucide="arrow-up-right"></i>
+            </button>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+  graphicLibraryContent.scrollTop = 0;
+  window.lucide?.createIcons();
+};
+
+const renderGraphicProject = (project) => {
+  if (!graphicLibraryContent) return;
+  graphicLibraryEyebrow.textContent = project.collectionLabel;
+  graphicLibraryTitle.textContent = project.title;
+  graphicLibraryDescription.textContent = project.summary;
+  graphicLibraryBack.hidden = false;
+  graphicLibraryContent.innerHTML = `
+    <div class="graphic-project-summary">
+      <span>${project.images.length} image${project.images.length === 1 ? "" : "s"}</span>
+      <span>${escapeLibraryHtml(project.collectionLabel)}</span>
+    </div>
+    <div class="graphic-project-gallery">
+      ${project.images
+        .map(
+          (image, index) => `
+            <button type="button" class="graphic-gallery-item" data-gallery-image data-source="${escapeLibraryHtml(image.src)}" data-alt="${escapeLibraryHtml(image.alt || `${project.title} image ${index + 1}`)}">
+              <img loading="lazy" decoding="async" src="${escapeLibraryHtml(image.src)}" alt="${escapeLibraryHtml(image.alt || "")}">
+              <span>${String(index + 1).padStart(2, "0")}</span>
+            </button>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+  graphicLibraryContent.scrollTop = 0;
+};
+
+document.querySelectorAll("[data-graphic-group]").forEach((card) => {
+  card.querySelector(".graphic-group-open")?.addEventListener("click", async () => {
+    openGraphicLibrary();
+    graphicLibraryContent.innerHTML = '<div class="graphic-library-loading">Loading projects...</div>';
+    try {
+      const data = await loadGraphicLibrary();
+      const group = data.groups.find((item) => item.id === card.dataset.graphicGroup);
+      if (!group) throw new Error("Graphic Design group not found.");
+      renderGraphicGroup(group);
+    } catch (error) {
+      graphicLibraryContent.innerHTML = `<div class="graphic-library-loading">${escapeLibraryHtml(error.message)}</div>`;
+    }
+  });
+});
+
+graphicLibraryContent?.addEventListener("click", (event) => {
+  const projectButton = event.target.closest("[data-graphic-project]");
+  if (projectButton && graphicLibraryData) {
+    const project = graphicLibraryData.projects.find((item) => item.id === projectButton.dataset.graphicProject);
+    if (project) renderGraphicProject(project);
+    return;
+  }
+
+  const galleryButton = event.target.closest("[data-gallery-image]");
+  if (galleryButton) {
+    openImageLightbox(galleryButton.dataset.source, galleryButton.dataset.alt);
+  }
+});
+
+graphicLibraryBack?.addEventListener("click", () => {
+  if (activeGraphicGroup) renderGraphicGroup(activeGraphicGroup);
+});
+
+graphicLibraryCloseItems.forEach((item) => item.addEventListener("click", closeGraphicLibrary));
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && graphicLibrary?.classList.contains("is-open") && !imageLightbox?.classList.contains("is-open")) {
+    closeGraphicLibrary();
+  }
+});
