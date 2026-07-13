@@ -112,6 +112,17 @@ tabs.forEach((tab) => {
   });
 });
 
+document.querySelectorAll("[data-expertise-filter]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const filter = link.dataset.expertiseFilter;
+    const matchingTab = document.querySelector(`.project-tab[data-filter="${filter}"]`);
+    if (!matchingTab) return;
+    tabs.forEach((item) => item.classList.remove("active"));
+    matchingTab.classList.add("active");
+    applyProjectFilter(filter);
+  });
+});
+
 applyProjectFilter(document.querySelector(".project-tab.active")?.dataset.filter || "design");
 
 if ("IntersectionObserver" in window) {
